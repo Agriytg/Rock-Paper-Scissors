@@ -1,0 +1,142 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f4f4;
+}
+
+
+
+.game {
+    width: 90%;
+    max-width: 600px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Heading */
+h1 {
+    margin-bottom: 10px;
+
+    font-size: 40px;
+}
+
+
+
+.subtitle {
+    margin-bottom: 30px;
+
+    font-size: 18px;
+
+    color: #666;
+}
+
+
+/* Buttons container */
+.choices {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+
+button {
+    padding: 15px 20px;
+
+    font-size: 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #eeeeee;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+
+    background: #dddddd;
+}
+
+
+/* Button click */
+button:active {
+    transform: translateY(0);
+}
+
+
+/* Disabled button */
+button:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.5;
+
+    transform: none;
+}
+
+
+/* Current round result */
+#result {
+    min-height: 60px;
+
+    margin-bottom: 25px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+/* Score */
+#score {
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+/* Make buttons stack on smaller screens */
+@media (max-width: 500px) {
+
+    .choices {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+}
